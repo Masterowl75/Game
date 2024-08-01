@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +10,8 @@ body {
 
 #game-container {
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 3000px;
+    height: 2000px;
     border: 1px solid #000;
     background-color: #fff;
 }
@@ -30,5 +31,10 @@ body {
 }
 
 #color-buttons {
-    margin-top: 20px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
 }

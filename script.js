@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         characterPosition.x = Math.max(0, Math.min(gameContainer.clientWidth - character.clientWidth, characterPosition.x));
         characterPosition.y = Math.max(0, Math.min(gameContainer.clientHeight - character.clientHeight, characterPosition.y));
         character.style.transform = `translate(${characterPosition.x}px, ${characterPosition.y}px)`;
+        gameContainer.style.transform = `translate(${-characterPosition.x + window.innerWidth / 2 - character.clientWidth / 2}px, ${-characterPosition.y + window.innerHeight / 2 - character.clientHeight / 2}px)`;
         checkForCollisions();
     }
 

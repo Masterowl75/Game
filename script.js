@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameContainer = document.getElementById('game-container');
     const colorButtons = document.getElementById('color-buttons');
     const colorItems = document.querySelectorAll('.color-item');
+    const controls = document.getElementById('controls');
     let collectedColors = [];
 
     let characterPosition = { x: 0, y: 0 };
@@ -61,6 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 moveCharacter(-10, 0);
                 break;
             case 'ArrowRight':
+                moveCharacter(10, 0);
+                break;
+        }
+    });
+
+    controls.addEventListener('click', (e) => {
+        switch (e.target.id) {
+            case 'up':
+                moveCharacter(0, -10);
+                break;
+            case 'down':
+                moveCharacter(0, 10);
+                break;
+            case 'left':
+                moveCharacter(-10, 0);
+                break;
+            case 'right':
                 moveCharacter(10, 0);
                 break;
         }
